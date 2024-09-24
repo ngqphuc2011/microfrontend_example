@@ -1,0 +1,40 @@
+{
+  "apps": [
+    {
+      "name": "product-backend",
+      "script": "bun run index.ts",
+      "cwd": "./product/backend",
+      "instances": 1,
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "name": "product-frontend",
+      "script": "yarn build && yarn preview",
+      "cwd": "./product/frontend",
+      "instances": 1,
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "name": "checkout",
+      "script": "yarn build && yarn preview",
+      "cwd": "./checkout/frontend",
+      "instances": 1,
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "name": "container",
+      "script": "yarn dev",
+      "cwd": "./container",
+      "instances": 1,
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+  ]
+}
